@@ -17,7 +17,7 @@
         <th style="width: 10px">&nbsp;</th>
       </tr>
       <tr *ngFor="let movie of listMovie">
-        <td><img src="{{ movie.poster_path}}" width="100px"></td>
+        <td class="img_poster"><img src="{{ movie.poster_path}}" width="100px"></td>
         <td>{{ movie.title }}</td>
         <td>{{ movie.genre_ids }}</td>
         <td>{{ movie.release_date }}</td>

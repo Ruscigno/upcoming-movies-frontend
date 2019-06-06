@@ -1,7 +1,24 @@
 <aside class="main-sidebar">
   <section class="sidebar">
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/14850_111120439283690_3283806759232284782_n.jpg?_nc_cat=101&_nc_oc=AQl8YyGbQYP4Zc3bavX6jT601sb0Tgv2cB_E5WOwbsCmes_xi0tRyZuodpS_2rA_rRE&_nc_ht=scontent.fbnu1-1.fna&oh=ec569655a1315fd298caab41b28c2df1&oe=5D5640BD" width="160px" class="img-circle" alt="User Image">
+      </div>
+      <div class="pull-left info">
+        <p>Alessander Ruscigno</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </form>
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="treeview">
+      <li class="active treeview menu-open">
         <a href="#">
           <i class="fa fa-edit"></i> <span>Movies</span>
           <span class="pull-right-container">
@@ -9,7 +26,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a [routerLink]="['/movie-list']"><i class="fa fa-circle-o"></i> List</a></li>
+          <li><a [routerLink]="['/movie-list']"><i class="fa fa-circle-o"></i> Upcoming</a></li>
         </ul>
       </li>
     </ul>

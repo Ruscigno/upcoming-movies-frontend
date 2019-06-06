@@ -12,6 +12,7 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     MovieListComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,
