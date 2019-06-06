@@ -1,0 +1,1 @@
+export const UPCOMING_MOVIES_API = 'http://localhost:8080/api/v1/movies'

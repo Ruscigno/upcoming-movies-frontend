@@ -1,0 +1,40 @@
+<div [ngClass]="classCss" role="alert" *ngIf="message">
+  <strong>{{ message.text }}</strong>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="box">
+  <div class="box-header with-border">
+    <h3 class="box-title">Movie Details</h3>
+  </div>
+  <div class="box-body">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th style="width: 30px">Details</th>
+            <th></th>
+            <th style="width: 210px">Poster</th>
+          </tr>
+          <tr>
+            <td>Title:</td>
+            <td>{{ movie.title }}</td>
+            <td rowspan="4"><img src="https://image.tmdb.org/t/p/w200{{ movie.poster_path }}"></td>
+          </tr>
+          <tr>
+            <td>Overview:</td>
+            <td>{{ movie.overview }}</td>
+          </tr>
+          <tr>
+            <td>Release date:</td>
+            <td>{{ movie.release_date }}</td>
+          </tr>
+          <tr>
+            <td>Genre:</td>
+            <td><li *ngFor="let g of movie.genres">{{ g.name }}</li></td>
+          </tr>
+        </tbody>                            
+      </table>
+  </div>
+  <div class="box-footer clearfix">
+  </div>
+</div>

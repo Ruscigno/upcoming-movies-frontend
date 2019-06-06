@@ -1,0 +1,37 @@
+<div [ngClass]="classCss" role="alert" *ngIf="message">
+  <strong>{{ message.text }}</strong>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="box">
+  <div class="box-header with-border">
+    <h3 class="box-title">Movie List</h3>
+  </div>
+  <div class="box-body">
+    <table class="table table-bordered">
+      <tr>
+        <th style="width: 210px">Image</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Realease Date</th>
+        <th style="width: 10px">&nbsp;</th>
+      </tr>
+      <tr *ngFor="let movie of listMovie">
+        <td><img src="{{ movie.poster_path}}" width="100px"></td>
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.genre_ids }}</td>
+        <td>{{ movie.release_date }}</td>
+        <td><button class="btn btn-primary" (click)="openDetails(movie.id)">Open Details</button></td>
+      </tr>      
+    </table>
+  </div>
+  <div class="box-footer clearfix">
+    <ul class="pagination pagination-sm no-margin pull-right">
+      <li><a href="" (click)="setPreviousPage($event)">&laquo;</a></li>
+      <li *ngFor="let p of pages; let i=index">
+        <a [ngClass]="{'pagination-focus': i==page}" href="" (click)="setPage(i, $event)">{{ i+1 }}</a>
+      </li>
+      <li><a href="" (click)="setNextPage($event)">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
